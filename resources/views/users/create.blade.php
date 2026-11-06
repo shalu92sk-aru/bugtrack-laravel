@@ -1,0 +1,1 @@
+@extends('layouts.app')@section('title','Add member')@section('heading','Add member')@section('content')<h1 class="page-title mb-4">Add team member</h1><div class="card p-4" style="max-width:650px"><form method="POST" action="{{route('users.store')}}">@csrf@include('users._form')<button class="btn btn-primary">Create account</button></form></div>@endsection

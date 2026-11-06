@@ -1,0 +1,6 @@
+/vendor
+/.env
+/.phpunit.cache
+/node_modules
+/public/build
+/storage/*.key

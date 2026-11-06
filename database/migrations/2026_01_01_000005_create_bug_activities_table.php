@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration;use Illuminate\Database\Schema\Blueprint;use Illuminate\Support\Facades\Schema;
+return new class extends Migration {public function up():void{Schema::create('bug_activities',function(Blueprint $t){$t->id();$t->foreignId('bug_id')->constrained()->cascadeOnDelete();$t->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();$t->string('action');$t->string('field')->nullable();$t->text('old_value')->nullable();$t->text('new_value')->nullable();$t->timestamps();$t->index(['bug_id','created_at']);});}public function down():void{Schema::dropIfExists('bug_activities');}};
